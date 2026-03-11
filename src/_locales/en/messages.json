@@ -1,0 +1,246 @@
+{
+  "appName": {
+    "message": "Claw",
+    "description": ""
+  },
+  "extName": {
+    "message": "Claw - Tool for Media Data Collection",
+    "description": "Extension name"
+  },
+  "forgetPwdLabel": {
+    "message": "Forget password?"
+  },
+  "extDesc": {
+    "message": "Tool for Media Data Collection",
+    "description": "Extension description"
+  },
+  "loginTitle": {
+    "message": "Login",
+    "description": "Login page title"
+  },
+  "otherLoginWays": {
+    "message": "other ways",
+    "description": "Other ways to login"
+  },
+  "registerTitle": {
+    "message": "Register",
+    "description": "Register page title"
+  },
+  "usernameLabel": {
+    "message": "Username",
+    "description": "Username label"
+  },
+  "pwdLabel": {
+    "message": "Password",
+    "description": "Password label"
+  },
+  "loginButtonLabel": {
+    "message": "Log In",
+    "description": "Log In button label"
+  },
+  "logoutButtonLabel": {
+    "message": "Log Out",
+    "description": "Log Out button label"
+  },
+  "logoutConfirmLabel": {
+    "message": "Are you sure you want to log out?",
+    "description": "Logout confirm prompt"
+  },
+  "registerButtonLabel": {
+    "message": "Register",
+    "description": "Register button label"
+  },
+  "startCollectingLabel": {
+    "message": "Start",
+    "description": "Start crawling button label"
+  },
+  "cancelCollectingLabel": {
+    "message": "Cancel",
+    "description": "Cancel crawling button label"
+  },
+  "config": {
+    "message": "Config",
+    "description": "Config tab label on side panel"
+  },
+  "alertNoDateRange": {
+    "message": "Please enter a date range.",
+    "description": "Alert message when no date range is provided"
+  },
+  "alertNoAccountId": {
+    "message": "Account ID is required :)",
+    "description": "Alert message when no account ID is provided"
+  },
+  "alertNoUserName": {
+    "message": "Username is required :)",
+    "description": "Alert message when no username is provided"
+  },
+  "alertNoPassword": {
+    "message": "Password is required :)",
+    "description": "Alert message when no password is provided"
+  },
+  "loginFailedLabel": {
+    "message": "User not found or password is incorrect.",
+    "description": "Login failed message"
+  },
+  "registerFailedLabel": {
+    "message": "Register failed.",
+    "description": "Register failed message"
+  },
+  "registerSuccessLabel": {
+    "message": "Register success.",
+    "description": "Register success message"
+  },
+  "usernameDuplicateLabel": {
+    "message": "Username already exists.",
+    "description": "Username duplicate error"
+  },
+  "accountIdFiledLabel": {
+    "message": "Account ID",
+    "description": "Account ID field label"
+  },
+  "dateLaFieldLabel": {
+    "message": "Date",
+    "description": "Date field label"
+  },
+  "accountIdFiledPlaceholder": {
+    "message": "Please enter Instagram Account ID",
+    "description": "Account ID field placeholder"
+  },
+  "quickDateFiledLabel": {
+    "message": "Quick Date",
+    "description": "Quick date field label"
+  },
+  "modifyDateFiledLabel": {
+    "message": "Modify Date",
+    "description": "Modify date field label"
+  },
+  "todayLabel": {
+    "message": "Today",
+    "description": "Today label"
+  },
+  "yesterdayLabel": {
+    "message": "Yesterday",
+    "description": "Yesterday label"
+  },
+  "thisMonthLabel": {
+    "message": "This Month",
+    "description": "This month label"
+  },
+  "lastMonthLabel": {
+    "message": "Last Month",
+    "description": "Last month label"
+  },
+  "plusOneDayLabel": {
+    "message": "+1D",
+    "description": "Plus one day label"
+  },
+  "minusOneDayLabel": {
+    "message": "-1D",
+    "description": "Minus one day label"
+  },
+  "plusOneMonthLabel": {
+    "message": "+1M",
+    "description": "Plus one month label"
+  },
+  "minusOneMonthLabel": {
+    "message": "-1M",
+    "description": "Minus one month label"
+  },
+  "startDateLabel": {
+    "message": "Start Date",
+    "description": "Start date label"
+  },
+  "endDateLabel": {
+    "message": "End Date",
+    "description": "End date label"
+  },
+  "dateFormatHint": {
+    "message": "Date format: YYYY-MM-DD. E.g., 2023-08-15",
+    "description": "Date format hint"
+  },
+  "historyLabel": {
+    "message": "History",
+    "description": "History label"
+  },
+  "noDataLabel": {
+    "message": "No data",
+    "description": "Empty state text for lists"
+  },
+  "downloadLabel": {
+    "message": "Download",
+    "description": "Download label"
+  },
+  "clearLabel": {
+    "message": "Clear",
+    "description": "Clear history button label"
+  },
+  "clearConfirmLabel": {
+    "message": "Clear all history records?",
+    "description": "Confirm message before clearing history"
+  },
+  "exportLabel": {
+    "message": "Export",
+    "description": "Export history button label"
+  },
+  "searchLabel": {
+    "message": "Search",
+    "description": "Search input placeholder"
+  },
+  "totalLabel": {
+    "message": "Total",
+    "description": "Total count label"
+  },
+  "previewLabel": {
+    "message": "Preview",
+    "description": "Preview label"
+  },
+  "freeUserDateHint": {
+    "message": "By default, the first 50 are collected. 🚀 Upgrade to unlock the full date range.",
+    "description": "Hint for free users about date range"
+  },
+  "navigateToInstagramAlert": {
+    "message": "Please navigate to an Instagram page to use the Media Crawler extension.",
+    "description": "Navigate to Instagram alert"
+  },
+  "OrLabel": {
+    "message": "or"
+  },
+  "GoogleLoginLabel": {
+    "message": "Continue with Google"
+  },
+  "docsEntryLabel": {
+    "message": "Docs",
+    "description": "Entry button to docs/info page"
+  },
+  "navHomeLabel": {
+    "message": "Home",
+    "description": "Docs nav home label"
+  },
+  "navDocsLabel": {
+    "message": "Docs",
+    "description": "Docs nav label"
+  },
+  "navPlansLabel": {
+    "message": "Plans",
+    "description": "Docs nav plans label"
+  },
+  "backLabel": {
+    "message": "Back",
+    "description": "Back button label"
+  },
+  "editLabel": {
+    "message": "Edit",
+    "description": "Edit markdown label"
+  },
+  "saveLabel": {
+    "message": "Save",
+    "description": "Save markdown label"
+  },
+  "resetLabel": {
+    "message": "Reset",
+    "description": "Reset markdown label"
+  },
+  "PlatfromIns": {
+    "message": "Ins"
+  }
+}

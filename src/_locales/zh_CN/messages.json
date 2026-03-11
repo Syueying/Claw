@@ -1,0 +1,238 @@
+{
+  "appName": {
+    "message": "Claw",
+    "description": ""
+  },
+  "extName": {
+    "message": "Claw - 媒体数据收集工具",
+    "description": "Extension name"
+  },
+  "forgetPwdLabel": {
+    "message": "忘记密码"
+  },
+  "extDesc": {
+    "message": "...",
+    "description": "Extension description"
+  },
+  "loginTitle": {
+    "message": "登录",
+    "description": "Login page title"
+  },
+  "registerTitle": {
+    "message": "注册",
+    "description": "Register page title"
+  },
+  "usernameLabel": {
+    "message": "用户名",
+    "description": "Username label"
+  },
+  "pwdLabel": {
+    "message": "密码",
+    "description": "Password label"
+  },
+  "loginButtonLabel": {
+    "message": "登录",
+    "description": "Log In button label"
+  },
+  "logoutButtonLabel": {
+    "message": "登出",
+    "description": "Log Out button label"
+  },
+  "logoutConfirmLabel": {
+    "message": "确认要登出吗？",
+    "description": "Logout confirm prompt"
+  },
+  "registerButtonLabel": {
+    "message": "注册",
+    "description": "Register button label"
+  },
+  "startCollectingLabel": {
+    "message": "开始",
+    "description": "Start crawling button label"
+  },
+  "cancelCollectingLabel": {
+    "message": "取消",
+    "description": "Cancel crawling button label"
+  },
+  "config": {
+    "message": "配置",
+    "description": "Config tab label on side panel"
+  },
+  "alertNoDateRange": {
+    "message": "日期不能为空",
+    "description": "Alert message when no date range is provided"
+  },
+  "alertNoAccountId": {
+    "message": "账号不能为空 :)",
+    "description": "Alert message when no account ID is provided"
+  },
+  "alertNoUserName": {
+    "message": "用户名不能为空 :)",
+    "description": "Alert message when no username is provided"
+  },
+  "alertNoPassword": {
+    "message": "密码不能为空 :)",
+    "description": "Alert message when no password is provided"
+  },
+  "loginFailedLabel": {
+    "message": "用户不存在或密码错误",
+    "description": "Login failed message"
+  },
+  "registerFailedLabel": {
+    "message": "注册失败。",
+    "description": "Register failed message"
+  },
+  "registerSuccessLabel": {
+    "message": "注册成功。",
+    "description": "Register success message"
+  },
+  "usernameDuplicateLabel": {
+    "message": "用户名已存在",
+    "description": "Username duplicate error"
+  },
+  "accountIdFiledLabel": {
+    "message": "账号ID",
+    "description": "Account ID field label"
+  },
+  "dateLaFieldLabel": {
+    "message": "日期",
+    "description": "Date field label"
+  },
+  "accountIdFiledPlaceholder": {
+    "message": "输入 Instagram 账号ID",
+    "description": "Account ID field placeholder"
+  },
+  "quickDateFiledLabel": {
+    "message": "快捷日期",
+    "description": "Quick date field label"
+  },
+  "modifyDateFiledLabel": {
+    "message": "调整日期",
+    "description": "Modify date field label"
+  },
+  "todayLabel": {
+    "message": "今天",
+    "description": "Today label"
+  },
+  "yesterdayLabel": {
+    "message": "昨天",
+    "description": "Yesterday label"
+  },
+  "thisMonthLabel": {
+    "message": "本月",
+    "description": "This month label"
+  },
+  "lastMonthLabel": {
+    "message": "上个月",
+    "description": "Last month label"
+  },
+  "plusOneDayLabel": {
+    "message": "+1天",
+    "description": "Plus one day label"
+  },
+  "minusOneDayLabel": {
+    "message": "-1天",
+    "description": "Minus one day label"
+  },
+  "plusOneMonthLabel": {
+    "message": "+1月",
+    "description": "Plus one month label"
+  },
+  "minusOneMonthLabel": {
+    "message": "-1月",
+    "description": "Minus one month label"
+  },
+  "startDateLabel": {
+    "message": "开始日期",
+    "description": "Start date label"
+  },
+  "endDateLabel": {
+    "message": "结束日期",
+    "description": "End date label"
+  },
+  "historyLabel": {
+    "message": "历史记录",
+    "description": "History label"
+  },
+  "noDataLabel": {
+    "message": "暂无数据",
+    "description": "Empty state text for lists"
+  },
+  "downloadLabel": {
+    "message": "下载",
+    "description": "Download label"
+  },
+  "clearLabel": {
+    "message": "清空",
+    "description": "Clear history button label"
+  },
+  "clearConfirmLabel": {
+    "message": "确认清空所有历史记录？",
+    "description": "Confirm message before clearing history"
+  },
+  "exportLabel": {
+    "message": "导出",
+    "description": "Export history button label"
+  },
+  "searchLabel": {
+    "message": "搜索",
+    "description": "Search input placeholder"
+  },
+  "totalLabel": {
+    "message": "总数",
+    "description": "Total count label"
+  },
+  "previewLabel": {
+    "message": "预览",
+    "description": "Preview label"
+  },
+  "freeUserDateHint": {
+    "message": "默认抓取前50条，🚀 升级会员即可解锁完整日期范围 ",
+    "description": "Hint for free users about date range"
+  },
+  "navigateToInstagramAlert": {
+    "message": "请导航到 Instagram 页面以使用该扩展。",
+    "description": "Navigate to Instagram alert"
+  },
+  "OrLabel": {
+    "message": "或"
+  },
+  "GoogleLoginLabel": {
+    "message": "通过Google登录"
+  },
+  "docsEntryLabel": {
+    "message": "文档",
+    "description": "入口按钮"
+  },
+  "navHomeLabel": {
+    "message": "首页",
+    "description": "文档导航首页"
+  },
+  "navDocsLabel": {
+    "message": "文档",
+    "description": "文档导航"
+  },
+  "navPlansLabel": {
+    "message": "会员",
+    "description": "文档导航套餐"
+  },
+  "backLabel": {
+    "message": "返回",
+    "description": "返回按钮"
+  },
+  "editLabel": {
+    "message": "编辑",
+    "description": "编辑 markdown"
+  },
+  "saveLabel": {
+    "message": "保存",
+    "description": "保存 markdown"
+  },
+  "resetLabel": {
+    "message": "重置",
+    "description": "重置 markdown"
+  },
+  "PlatfromIns": {
+    "message": "Ins"
+  }
+}

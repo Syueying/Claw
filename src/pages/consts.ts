@@ -1,0 +1,26 @@
+export const LATEST_COLLECTED_TRACE = "LATEST_COLLECTED_TRACE";
+export const HISTORY = "HISTORY";
+
+// chrome.runtime.externalMessage
+export const START_COLLECTION = "START_COLLECTION"
+export const START_SCROLL = "START_SCROLL"
+export const STOP_COLLECTION = "STOP_COLLECTION"
+export const LIST_RUNS = "LIST_RUNS"
+export const EXPORT_RUN = "EXPORT_RUN"
+export const CLEAR_HISTORY = "CLEAR_HISTORY"
+export const COLLECTING_STATE = "COLLECTING_STATE"
+export const HISTORY_REFRESH_TS = "HISTORY_REFRESH_TS"
+export const START_HOOK = "START_HOOK"
+export const STOP_HOOK = "STOP_HOOK"
+export const NET_RESPONSE = "NET_RESPONSE"
+export const NET_TIMEOUT = "NET_TIMEOUT"
+export const CHECK_USERNAME = "CHECK_USERNAME"
+export const LOGIN = "LOGIN"
+export const REGISTER = "REGISTER"
+export const GET_USER_TYPE = "GET_USER_TYPE"
+export const LOGOUT = "LOGOUT"
+
+export const CLAW_C = 'claw_c'
+export const USER_PROFILE = "USER_PROFILE"
+
+export const DEFAULT_ITEMS_TO_COLLECT = 50

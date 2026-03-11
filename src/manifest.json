@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "Claw_BETA",
+  "description": "THIS EXTENSION IS FOR BETA TESTING",
+  "default_locale": "en",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "background.bundle.js"
+  },
+  "action": {
+  "default_icon": {
+      "16": "assets/img/icon-16.png",
+      "32": "assets/img/icon-32.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/icon-16.png",
+    "32": "assets/img/icon-32.png",
+    "48": "assets/img/icon-48.png",
+    "128": "assets/img/icon-128.png"
+  },
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://cfhshhogusutbyctcjsn.supabase.co/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["assets/fonts/fonts.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*"],
+      "matches": ["https://www.instagram.com/*"]
+    }
+  ],
+  "commands": {
+    "start-collecting": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+R",
+        "mac": "Command+R"
+      },
+      "description": "Start collecting"
+    },
+    "cancel-collecting": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+C",
+        "mac": "Command+C"
+      },
+      "description": "Cancel collecting"
+    }
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "cookies",
+    "scripting",
+    "webRequest",
+    "activeTab",
+    "downloads",
+    "debugger"
+  ]
+}

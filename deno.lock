@@ -1,0 +1,60 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/assert@1": "1.0.19",
+    "jsr:@std/dotenv@*": "0.225.6",
+    "jsr:@std/internal@^1.0.12": "1.0.12"
+  },
+  "jsr": {
+    "@std/assert@1.0.19": {
+      "integrity": "eaada96ee120cb980bc47e040f82814d786fe8162ecc53c91d8df60b8755991e",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/dotenv@0.225.6": {
+      "integrity": "1d6f9db72f565bd26790fa034c26e45ecb260b5245417be76c2279e5734c421b"
+    },
+    "@std/internal@1.0.12": {
+      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    }
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@ant-design/icons@^6.1.0",
+        "npm:@ant-design/pro-components@^2.8.10",
+        "npm:@babel/core@^7.28.6",
+        "npm:@babel/preset-env@^7.28.6",
+        "npm:@babel/preset-react@^7.28.5",
+        "npm:@popperjs/core@^2.11.8",
+        "npm:@supabase/supabase-js@^2.49.1",
+        "npm:@types/chrome@~0.1.36",
+        "npm:@types/react-dom@^19.2.3",
+        "npm:@types/react@^19.2.10",
+        "npm:autoprefixer@^10.4.23",
+        "npm:babel-loader@10",
+        "npm:clean-webpack-plugin@4",
+        "npm:copy-webpack-plugin@^13.0.1",
+        "npm:css-loader@^7.1.2",
+        "npm:html-loader@^5.1.0",
+        "npm:html-webpack-plugin@^5.6.6",
+        "npm:postcss-loader@^8.2.0",
+        "npm:react-dom@^19.2.4",
+        "npm:react-markdown@^9.1.0",
+        "npm:react@^19.2.4",
+        "npm:sass-loader@^16.0.6",
+        "npm:sass@^1.97.3",
+        "npm:source-map-loader@5",
+        "npm:ssestream@^1.1.0",
+        "npm:style-loader@4",
+        "npm:supabase@^2.76.12",
+        "npm:ts-loader@^9.5.4",
+        "npm:webpack-cli@^6.0.1",
+        "npm:webpack-dev-server@^5.2.3",
+        "npm:webpack@^5.105.2",
+        "npm:xlsx@~0.18.5"
+      ]
+    }
+  }
+}
