@@ -38,7 +38,7 @@ const injectHook = (apiUrlIncludes?: string) => {
   if (!parent) return;
   const script = document.createElement("script");
   script.type = "text/javascript";
-  script.src = chrome.runtime.getURL("contentHook.js");
+  script.src = chrome.runtime.getURL("pageBridge.js");
   parent.appendChild(script);
   script.onload = () => script.remove();
 };

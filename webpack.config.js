@@ -143,8 +143,8 @@ const config = {
                     force: true,
                 },
                 {
-                    from: "src/pages/Content/hook.js",
-                    to: path.join(__dirname, "build/contentHook.js"),
+                    from: "src/pages/Content/bridge.js",
+                    to: path.join(__dirname, "build/pageBridge.js"),
                     force: true,
                 },
             ],

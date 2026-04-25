@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Claw",
-  "description": "Tool for Media Data Collection",
+  "description": "Collect public Instagram post metadata such as caption, the number of likes and the number of comments for marketing analysis.",
   "default_locale": "en",
   "version": "1.0.0",
   "background": {
@@ -36,8 +36,14 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["*"],
-      "matches": ["https://www.instagram.com/*"]
+      "resources": [
+        "sidepanel.html",
+        "assets/*",
+        "pageBridge.js"
+      ],
+      "matches": [
+        "https://www.instagram.com/*"
+      ]
     }
   ],
   "commands": {
