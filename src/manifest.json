@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Claw",
-  "description": "Collect public Instagram post metadata such as caption, the number of likes and the number of comments for marketing analysis.",
+  "name": "PostRay",
+  "description": "Collect public post captions, likes, comments, and timestamps from Instagram profiles, then export results to Excel.",
   "default_locale": "en",
   "version": "1.0.0",
   "background": {

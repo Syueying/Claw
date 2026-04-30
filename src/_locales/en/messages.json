@@ -1,17 +1,17 @@
 {
   "appName": {
-    "message": "Claw",
+    "message": "PostRay",
     "description": ""
   },
   "extName": {
-    "message": "Claw - Tool for Media Data Collection",
+    "message": "PostRay - Export public Instagram post data",
     "description": "Extension name"
   },
   "forgetPwdLabel": {
     "message": "Forget password?"
   },
   "extDesc": {
-    "message": "Tool for Media Data Collection",
+    "message": "Collect public post captions, likes, comments, and timestamps from Instagram profiles.",
     "description": "Extension description"
   },
   "loginTitle": {
@@ -35,11 +35,11 @@
     "description": "Password label"
   },
   "loginButtonLabel": {
-    "message": "Log In",
+    "message": "Sign In",
     "description": "Log In button label"
   },
   "logoutButtonLabel": {
-    "message": "Log Out",
+    "message": "Sign Out",
     "description": "Log Out button label"
   },
   "logoutConfirmLabel": {
@@ -47,15 +47,15 @@
     "description": "Logout confirm prompt"
   },
   "registerButtonLabel": {
-    "message": "Register",
+    "message": "Create Account",
     "description": "Register button label"
   },
   "startCollectingLabel": {
-    "message": "Start",
+    "message": "Collect Posts",
     "description": "Start crawling button label"
   },
   "cancelCollectingLabel": {
-    "message": "Cancel",
+    "message": "Stop Collection",
     "description": "Cancel crawling button label"
   },
   "config": {
@@ -67,15 +67,15 @@
     "description": "Alert message when no date range is provided"
   },
   "alertNoAccountId": {
-    "message": "Account ID is required :)",
+    "message": "Profile ID is required.",
     "description": "Alert message when no account ID is provided"
   },
   "alertNoUserName": {
-    "message": "Username is required :)",
+    "message": "Username is required.",
     "description": "Alert message when no username is provided"
   },
   "alertNoPassword": {
-    "message": "Password is required :)",
+    "message": "Password is required.",
     "description": "Alert message when no password is provided"
   },
   "loginFailedLabel": {
@@ -95,15 +95,15 @@
     "description": "Username duplicate error"
   },
   "accountIdFiledLabel": {
-    "message": "Account ID",
+    "message": "Instagram Profile",
     "description": "Account ID field label"
   },
   "dateLaFieldLabel": {
-    "message": "Date",
+    "message": "Date Range",
     "description": "Date field label"
   },
   "accountIdFiledPlaceholder": {
-    "message": "Please enter Instagram Account ID",
+    "message": "Enter a public Instagram profile ID",
     "description": "Account ID field placeholder"
   },
   "quickDateFiledLabel": {
@@ -159,7 +159,7 @@
     "description": "Date format hint"
   },
   "historyLabel": {
-    "message": "History",
+    "message": "Recent Collections",
     "description": "History label"
   },
   "noDataLabel": {
@@ -171,35 +171,35 @@
     "description": "Download label"
   },
   "clearLabel": {
-    "message": "Clear",
+    "message": "Clear History",
     "description": "Clear history button label"
   },
   "clearConfirmLabel": {
-    "message": "Clear all history records?",
+    "message": "Clear all recent collections?",
     "description": "Confirm message before clearing history"
   },
   "exportLabel": {
-    "message": "Export",
+    "message": "Export Excel",
     "description": "Export history button label"
   },
   "searchLabel": {
-    "message": "Search",
+    "message": "Search records",
     "description": "Search input placeholder"
   },
   "totalLabel": {
-    "message": "Total",
+    "message": "Records",
     "description": "Total count label"
   },
   "previewLabel": {
-    "message": "Preview",
+    "message": "Open Viewer",
     "description": "Preview label"
   },
   "freeUserDateHint": {
-    "message": "By default, the first 50 are collected. 🚀 Upgrade to unlock the full date range.",
+    "message": "Free plan collects the most recent 50 public posts. Upgrade to unlock custom date ranges.",
     "description": "Hint for free users about date range"
   },
   "navigateToInstagramAlert": {
-    "message": "Please navigate to an Instagram page to use the Media Crawler extension.",
+    "message": "Open an Instagram profile page to use PostRay.",
     "description": "Navigate to Instagram alert"
   },
   "OrLabel": {
@@ -209,7 +209,7 @@
     "message": "Continue with Google"
   },
   "docsEntryLabel": {
-    "message": "Docs",
+    "message": "Guide",
     "description": "Entry button to docs/info page"
   },
   "navHomeLabel": {
@@ -217,7 +217,7 @@
     "description": "Docs nav home label"
   },
   "navDocsLabel": {
-    "message": "Docs",
+    "message": "Guide",
     "description": "Docs nav label"
   },
   "navPlansLabel": {
@@ -241,6 +241,33 @@
     "description": "Reset markdown label"
   },
   "PlatfromIns": {
-    "message": "Ins"
+    "message": "Instagram"
+  },
+  "collectionSetupLabel": {
+    "message": "Collection Setup"
+  },
+  "signedInAsLabel": {
+    "message": "Signed in as"
+  },
+  "freePlanLabel": {
+    "message": "Free Plan"
+  },
+  "memberPlanLabel": {
+    "message": "Member Plan"
+  },
+  "platformLabel": {
+    "message": "Platform"
+  },
+  "planLabel": {
+    "message": "Plan"
+  },
+  "loginPanelLabel": {
+    "message": "Instagram Public Post Exporter"
+  },
+  "loginPanelDesc": {
+    "message": "Sign in to manage collections and export results."
+  },
+  "workspaceHeadlineLabel": {
+    "message": "Instagram Public Post Data"
   }
 }

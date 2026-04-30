@@ -4,7 +4,8 @@ import { addRecords, deleteAllRunStores, deleteRunRecords, getRecordsByRun } fro
 import * as XLSX from "xlsx";
 
 const runState = new Map();
-const NO_RESPONSE_TIMEOUT_MS = 3000;
+const NO_RESPONSE_TIMEOUT_MS = 10000;
+const INITIAL_RESPONSE_TIMEOUT_MS = 15000;
 const SUPABASE_ORIGIN = "https://cfhshhogusutbyctcjsn.supabase.co";
 const SUPABASE_DOMAIN = "cfhshhogusutbyctcjsn.supabase.co";
 const AUTH_LOGIN_STATE = "AUTH_LOGIN_STATE";
@@ -14,6 +15,16 @@ const clearNoResponseTimer = (state) => {
     clearTimeout(state.noResponseTimer);
     state.noResponseTimer = null;
   }
+};
+
+const armNoResponseTimer = (tabId, timeoutMs = NO_RESPONSE_TIMEOUT_MS, reason = "no_response") => {
+  const state = runState.get(tabId);
+  if (!state || state.stopped) return;
+  clearNoResponseTimer(state);
+  state.noResponseTimer = setTimeout(async () => {
+    await finalizeRun(tabId, reason);
+  }, timeoutMs);
+  runState.set(tabId, state);
 };
 
 const listAuthCookies = async () => {
@@ -279,7 +290,8 @@ const collect = async (msg) => {
     apiUrlIncludes: resolvedApiUrlIncludes,
     stopped: false,
     windowId,
-    collectedCount: 0
+    collectedCount: 0,
+    hasReceivedResponse: false,
   });
 
   await chrome.storage.local.set({
@@ -309,6 +321,7 @@ const collect = async (msg) => {
           endAt: endTime
         }
       });
+      armNoResponseTimer(tabId, INITIAL_RESPONSE_TIMEOUT_MS, "initial_no_response");
     } catch (e) {
       // Content script not ready yet.
     }
@@ -415,6 +428,16 @@ const exportRunToExcel = async (runId, filenameOverride) => {
   await chrome.downloads.download({ url, filename, saveAs: true });
 };
 
+const hasActiveDateWindow = (state) =>
+  Number.isFinite(state?.startAt) && Number.isFinite(state?.endAt);
+
+const isPinnedNode = (node) => {
+  if (!node || typeof node !== "object") return false;
+  if (node.is_pinned === true) return true;
+  if (Array.isArray(node.pinned_for_users) && node.pinned_for_users.length > 0) return true;
+  return false;
+};
+
 const handleNetResponse = async (payload, sender) => {
   if (!payload) return;
   const { url, text } = payload;
@@ -426,7 +449,9 @@ const handleNetResponse = async (payload, sender) => {
   if (!state || state.stopped) return;
 
   if (state.apiUrlIncludes && !url.includes(state.apiUrlIncludes)) return;
-  clearNoResponseTimer(state)
+  clearNoResponseTimer(state);
+  state.hasReceivedResponse = true;
+  runState.set(tabId, state);
 
   // 核心处理逻辑
   if (text.includes('xdt_api__v1__feed__user_timeline_graphql_connection')) {
@@ -436,12 +461,16 @@ const handleNetResponse = async (payload, sender) => {
     const edges = Array.isArray(timeline?.edges) ? timeline.edges : [];
 
     const rowsToSave = [];
-    let shouldStop = edges.length === 0 ? true : false;
+    let shouldStop = edges.length === 0;
+    let crossedStartBoundary = false;
+
+    const useDateWindow = hasActiveDateWindow(state);
 
     for (const edge of edges) {
       const node = edge?.node || {};
       const caption = node?.caption || {};
-      const createdAtRaw = node?.taken_at
+      const createdAtRaw = node?.taken_at;
+      const pinned = isPinnedNode(node);
 
       const row = {
         accountId: state.accountId,
@@ -452,7 +481,7 @@ const handleNetResponse = async (payload, sender) => {
         // media_type: node?.media_type ?? null
       };
       
-      if (state.accountType === 0) {
+      if (!useDateWindow) {
         if (state.collectedCount < DEFAULT_ITEMS_TO_COLLECT) {
           rowsToSave.push(row);
           state.collectedCount += 1;
@@ -466,11 +495,16 @@ const handleNetResponse = async (payload, sender) => {
           rowsToSave.push(row);
         }
 
-        if (createdAtRaw < (state.startAt / 1000)) {
-          shouldStop = true;
-          break
+        // Instagram may place pinned posts ahead of the normal timeline order.
+        // Those old pinned posts should not terminate the collection early.
+        if (!pinned && createdAtRaw < (state.startAt / 1000)) {
+          crossedStartBoundary = true;
         }
       }
+    }
+
+    if (useDateWindow && crossedStartBoundary) {
+      shouldStop = true;
     }
 
     if (rowsToSave.length > 0) {
@@ -493,14 +527,7 @@ const handleNetResponse = async (payload, sender) => {
     }
 
     await triggerScroll(tabId);
-    const nextState = runState.get(tabId);
-    if (nextState && !nextState.stopped) {
-      clearNoResponseTimer(nextState);
-      nextState.noResponseTimer = setTimeout(async () => {
-        await finalizeRun(tabId, "no_response");
-      }, NO_RESPONSE_TIMEOUT_MS);
-      runState.set(tabId, nextState);
-    }
+    armNoResponseTimer(tabId, NO_RESPONSE_TIMEOUT_MS, "no_response");
   }
 };
 

@@ -1,17 +1,17 @@
 {
   "appName": {
-    "message": "Claw",
+    "message": "PostRay",
     "description": ""
   },
   "extName": {
-    "message": "Claw - 媒体数据收集工具",
+    "message": "PostRay - 导出 Instagram 公开帖子数据",
     "description": "Extension name"
   },
   "forgetPwdLabel": {
     "message": "忘记密码"
   },
   "extDesc": {
-    "message": "...",
+    "message": "采集 Instagram 公开帖文的文案、点赞、评论和发布时间",
     "description": "Extension description"
   },
   "loginTitle": {
@@ -35,7 +35,7 @@
     "description": "Log In button label"
   },
   "logoutButtonLabel": {
-    "message": "登出",
+    "message": "退出登录",
     "description": "Log Out button label"
   },
   "logoutConfirmLabel": {
@@ -43,15 +43,15 @@
     "description": "Logout confirm prompt"
   },
   "registerButtonLabel": {
-    "message": "注册",
+    "message": "创建账号",
     "description": "Register button label"
   },
   "startCollectingLabel": {
-    "message": "开始",
+    "message": "开始采集",
     "description": "Start crawling button label"
   },
   "cancelCollectingLabel": {
-    "message": "取消",
+    "message": "停止采集",
     "description": "Cancel crawling button label"
   },
   "config": {
@@ -63,15 +63,15 @@
     "description": "Alert message when no date range is provided"
   },
   "alertNoAccountId": {
-    "message": "账号不能为空 :)",
+    "message": "账号 ID 不能为空。",
     "description": "Alert message when no account ID is provided"
   },
   "alertNoUserName": {
-    "message": "用户名不能为空 :)",
+    "message": "用户名不能为空。",
     "description": "Alert message when no username is provided"
   },
   "alertNoPassword": {
-    "message": "密码不能为空 :)",
+    "message": "密码不能为空。",
     "description": "Alert message when no password is provided"
   },
   "loginFailedLabel": {
@@ -91,15 +91,15 @@
     "description": "Username duplicate error"
   },
   "accountIdFiledLabel": {
-    "message": "账号ID",
+    "message": "Instagram 账号",
     "description": "Account ID field label"
   },
   "dateLaFieldLabel": {
-    "message": "日期",
+    "message": "日期范围",
     "description": "Date field label"
   },
   "accountIdFiledPlaceholder": {
-    "message": "输入 Instagram 账号ID",
+    "message": "输入公开 Instagram 账号 ID",
     "description": "Account ID field placeholder"
   },
   "quickDateFiledLabel": {
@@ -151,7 +151,7 @@
     "description": "End date label"
   },
   "historyLabel": {
-    "message": "历史记录",
+    "message": "最近采集",
     "description": "History label"
   },
   "noDataLabel": {
@@ -163,35 +163,35 @@
     "description": "Download label"
   },
   "clearLabel": {
-    "message": "清空",
+    "message": "清空记录",
     "description": "Clear history button label"
   },
   "clearConfirmLabel": {
-    "message": "确认清空所有历史记录？",
+    "message": "确认清空最近采集记录？",
     "description": "Confirm message before clearing history"
   },
   "exportLabel": {
-    "message": "导出",
+    "message": "导出 Excel",
     "description": "Export history button label"
   },
   "searchLabel": {
-    "message": "搜索",
+    "message": "搜索记录",
     "description": "Search input placeholder"
   },
   "totalLabel": {
-    "message": "总数",
+    "message": "记录数",
     "description": "Total count label"
   },
   "previewLabel": {
-    "message": "预览",
+    "message": "查看明细",
     "description": "Preview label"
   },
   "freeUserDateHint": {
-    "message": "默认抓取前50条，🚀 升级会员即可解锁完整日期范围 ",
+    "message": "免费版默认采集最近 50 条公开帖文，升级后可使用自定义日期范围。",
     "description": "Hint for free users about date range"
   },
   "navigateToInstagramAlert": {
-    "message": "请导航到 Instagram 页面以使用该扩展。",
+    "message": "请先打开 Instagram 账号页面，再使用 PostRay。",
     "description": "Navigate to Instagram alert"
   },
   "OrLabel": {
@@ -201,7 +201,7 @@
     "message": "通过Google登录"
   },
   "docsEntryLabel": {
-    "message": "文档",
+    "message": "使用指南",
     "description": "入口按钮"
   },
   "navHomeLabel": {
@@ -209,7 +209,7 @@
     "description": "文档导航首页"
   },
   "navDocsLabel": {
-    "message": "文档",
+    "message": "使用指南",
     "description": "文档导航"
   },
   "navPlansLabel": {
@@ -233,6 +233,33 @@
     "description": "重置 markdown"
   },
   "PlatfromIns": {
-    "message": "Ins"
+    "message": "Instagram"
+  },
+  "collectionSetupLabel": {
+    "message": "采集设置"
+  },
+  "signedInAsLabel": {
+    "message": "当前账号"
+  },
+  "freePlanLabel": {
+    "message": "免费版"
+  },
+  "memberPlanLabel": {
+    "message": "会员版"
+  },
+  "platformLabel": {
+    "message": "平台"
+  },
+  "planLabel": {
+    "message": "套餐"
+  },
+  "loginPanelLabel": {
+    "message": "Instagram 公开帖子导出工具"
+  },
+  "loginPanelDesc": {
+    "message": "登录后管理采集任务并导出结果。"
+  },
+  "workspaceHeadlineLabel": {
+    "message": "Instagram 公开帖子数据"
   }
 }

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Button, ConfigProvider, Layout, Space, Menu, Typography, Input } from "antd";
 import ReactMarkdown from "react-markdown";
-import { antdYellowTheme, brandColors } from "../../theme/yellowTheme";
+import { antdYellowTheme, appFontFamily, brandColors } from "../../theme/yellowTheme";
 
 const { Header, Content } = Layout;
 const { TextArea } = Input;
@@ -17,9 +17,9 @@ const STORAGE_KEYS: Record<TabKey, string> = {
 };
 
 const DEFAULT_MD: Record<TabKey, string> = {
-  home: `# Claw\n\n- Fast capture of Instagram posts\n- Export to Excel\n- Timeline filters (members)\n\n**Start** by entering an Account ID and clicking Start.`,
-  docs: `# Docs\n\n## Quick Start\n1. Open Instagram account page\n2. Enter Account ID\n3. Select date range (members)\n4. Click Start\n\n## Tips\n- Keep the tab open\n- Use Preview for details`,
-  plans: `# Plans\n\n- Free: latest 100 posts\n- Member: full date range\n\nContact us for team plans.`,
+  home: `# PostRay\n\n- Collect public Instagram post metadata\n- Export results to Excel\n- Keep recent local collection history\n\nOpen a public Instagram profile, enter the profile ID, and start collecting.`,
+  docs: `# Guide\n\n## Quick Start\n1. Open a public Instagram profile page\n2. Enter the profile ID\n3. Select a date range if available\n4. Click Collect Posts\n\n## Tips\n- Keep the tab open during collection\n- Use the viewer for detailed results`,
+  plans: `# Plans\n\n- Free: recent 50 public posts\n- Member: custom date range\n\nUse the side panel to manage collections and exports.`,
 };
 
 const InfoApp = () => {
@@ -56,7 +56,7 @@ const InfoApp = () => {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh", background: brandColors.background, fontFamily: '"Courier New", monospace' }}>
+    <Layout style={{ minHeight: "100vh", background: brandColors.background, fontFamily: appFontFamily }}>
       <Content style={{ padding: 10, display: "flex", justifyContent: "center" }}>
         <div style={{ width: "90%", maxWidth: 960 }}>
           <Menu
@@ -71,7 +71,7 @@ const InfoApp = () => {
               { key: "docs", label: chrome.i18n.getMessage("navDocsLabel") },
               { key: "plans", label: chrome.i18n.getMessage("navPlansLabel") },
             ]}
-            style={{ fontSize: 20, fontFamily: '"Courier New", monospace', borderRadius: '4px', background: brandColors.surface, border: `2px solid ${brandColors.border}`, boxShadow: brandColors.glow, letterSpacing: "0.04em" }}
+            style={{ fontSize: 18, fontFamily: appFontFamily, borderRadius: 14, background: brandColors.surface, border: `1px solid ${brandColors.border}`, boxShadow: brandColors.glow, letterSpacing: "0.01em" }}
           />
 
           <Space style={{ margin: "12px 0" }}>
@@ -87,10 +87,10 @@ const InfoApp = () => {
               value={currentMd}
               onChange={(e) => setMarkdown({ ...markdown, [tab]: e.target.value })}
               rows={16}
-              style={{ fontFamily: '"Courier New", monospace', background: brandColors.surface, color: "#3b2b00", border: `2px solid ${brandColors.border}` }}
+              style={{ fontFamily: appFontFamily, background: brandColors.surface, color: brandColors.text, border: `1px solid ${brandColors.border}` }}
             />
           ) : (
-            <div style={{ padding: "16px 18px", fontFamily: '"Courier New", monospace', color: "#3b2b00", background: brandColors.surface, border: `2px solid ${brandColors.border}`, borderRadius: 4, boxShadow: brandColors.glow }}>
+            <div style={{ padding: "16px 18px", fontFamily: appFontFamily, color: brandColors.text, background: brandColors.surface, border: `1px solid ${brandColors.border}`, borderRadius: 16, boxShadow: brandColors.glow }}>
               <ReactMarkdown>{currentMd}</ReactMarkdown>
             </div>
           )}

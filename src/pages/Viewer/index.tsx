@@ -1,10 +1,10 @@
 import '../../assets/fonts/fonts.css';
 import React, { useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { Button, ConfigProvider, Input, Layout, Space, Table, Typography } from "antd";
+import { Button, ConfigProvider, Input, Layout, Space, Table, Tag, Typography } from "antd";
 import { EXPORT_RUN, HISTORY } from "../consts";
 import { sendRuntimeMessage } from "../../utils/runtime";
-import { antdYellowTheme, brandColors } from "../../theme/yellowTheme";
+import { antdYellowTheme, appFontFamily, brandColors } from "../../theme/yellowTheme";
 
 type RecordRow = Record<string, any> & { id?: number };
 type HistoryRow = {
@@ -152,47 +152,79 @@ const ViewerApp = () => {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh", background: brandColors.background, fontFamily: '"Courier New", monospace' }}>
+    <Layout style={{ minHeight: "100vh", background: brandColors.background, fontFamily: appFontFamily }}>
       <Layout.Content style={{ padding: "24px 28px" }}>
-        <Space direction="vertical" size={12} style={{ width: "100%" }}>
-          <Space align="center" style={{ width: "100%", justifyContent: "space-between" }}>
-            <Space align="baseline" size={12}>
-        <Typography.Title level={4} style={{ marginBottom: 0, fontFamily: '"Courier New", monospace', color: "#3b2b00", letterSpacing: "0.04em" }}>
-                {titleText}
-              </Typography.Title>
-              <Typography.Text style={{ fontFamily: '"Courier New", monospace', color: brandColors.textMuted }}>
-                {chrome.i18n.getMessage("totalLabel")}: {filteredRows.length}
-              </Typography.Text>
-            </Space>
-            <Button type="primary" onClick={handleExport}>{chrome.i18n.getMessage("exportLabel")}</Button>
-          </Space>
-          <Input
-            placeholder={chrome.i18n.getMessage("searchLabel")}
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            style={{ maxWidth: 360, fontFamily: '"Courier New", monospace', background: brandColors.surface, color: "#3b2b00" }}
-          />
-        </Space>
-        <Table
-          size="small"
-          bordered
-          loading={loading}
-          dataSource={filteredRows}
-          columns={columns}
-          rowKey={(record, index) => (record.id ?? index) as any}
-          pagination={{
-            pageSize,
-            showSizeChanger: true,
-            pageSizeOptions: [10, 20, 50, 100],
-            onChange: (_page, nextPageSize) => {
-              if (nextPageSize) setPageSize(nextPageSize);
-            },
-            showTotal: (total, range) =>
-              `${range[0]}-${range[1]} / ${total}`,
+        <div
+          style={{
+            background: brandColors.surface,
+            borderRadius: 20,
+            border: `1px solid ${brandColors.border}`,
+            boxShadow: brandColors.glow,
+            padding: 20,
           }}
-          scroll={{ x: true }}
-          style={{ marginTop: 16, fontFamily: '"Courier New", monospace', background: brandColors.surface, border: `2px solid ${brandColors.border}`, borderRadius: 4, overflow: "hidden", boxShadow: brandColors.glow }}
-        />
+        >
+          <Space direction="vertical" size={14} style={{ width: "100%" }}>
+            <Space align="start" style={{ width: "100%", justifyContent: "space-between" }}>
+              <div>
+                <Tag
+                  style={{
+                    marginBottom: 10,
+                    borderRadius: 999,
+                    background: brandColors.backgroundSoft,
+                    border: `1px solid ${brandColors.border}`,
+                    color: brandColors.primary,
+                    fontFamily: appFontFamily,
+                  }}
+                >
+                  {chrome.i18n.getMessage("PlatfromIns")}
+                </Tag>
+                <Typography.Title
+                  level={4}
+                  style={{ margin: 0, fontFamily: appFontFamily, color: brandColors.text, letterSpacing: "-0.03em" }}
+                >
+                  {titleText}
+                </Typography.Title>
+                <Typography.Text style={{ fontFamily: appFontFamily, color: brandColors.textMuted }}>
+                  {chrome.i18n.getMessage("totalLabel")}: {filteredRows.length}
+                </Typography.Text>
+              </div>
+              <Button type="primary" onClick={handleExport}>
+                {chrome.i18n.getMessage("exportLabel")}
+              </Button>
+            </Space>
+            <Input
+              placeholder={chrome.i18n.getMessage("searchLabel")}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              style={{ maxWidth: 360, fontFamily: appFontFamily, background: brandColors.surface, color: brandColors.text }}
+            />
+            <Table
+              size="small"
+              bordered
+              loading={loading}
+              dataSource={filteredRows}
+              columns={columns}
+              rowKey={(record, index) => (record.id ?? index) as any}
+              pagination={{
+                pageSize,
+                showSizeChanger: true,
+                pageSizeOptions: [10, 20, 50, 100],
+                onChange: (_page, nextPageSize) => {
+                  if (nextPageSize) setPageSize(nextPageSize);
+                },
+                showTotal: (total, range) => `${range[0]}-${range[1]} / ${total}`,
+              }}
+              scroll={{ x: true }}
+              style={{
+                marginTop: 4,
+                fontFamily: appFontFamily,
+                background: brandColors.surface,
+                borderRadius: 12,
+                overflow: "hidden",
+              }}
+            />
+          </Space>
+        </div>
       </Layout.Content>
     </Layout>
   );

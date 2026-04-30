@@ -1,5 +1,5 @@
 {
-  "name": "claw",
+  "name": "postray",
   "version": "1.0.0",
   "main": "contentScript.js",
   "dependencies": {
@@ -27,7 +27,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Collect public post captions, likes, comments, and timestamps from Instagram profiles.",
   "devDependencies": {
     "@babel/core": "^7.28.6",
     "@babel/preset-env": "^7.28.6",
