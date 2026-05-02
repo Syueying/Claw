@@ -1,6 +1,6 @@
 // Web domain for GitHub Pages deployment.
 // Update this when deploying to a custom domain.
-const WEB_DOMAIN = "https://syueying.github.io/mediaGetter";
+const WEB_DOMAIN = "https://syueying.github.io/PostRay";
 
 // Runtime extension detection — no build-time flag needed.
 const isExtension =
