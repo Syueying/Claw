@@ -51,6 +51,7 @@ const config = {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
         exclude: /node_modules/,
+        options: { transpileOnly: true },
       },
       {
         test: /\.(js|jsx)$/,
