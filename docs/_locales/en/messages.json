@@ -1,0 +1,327 @@
+{
+  "appName": {
+    "message": "PostRay",
+    "description": ""
+  },
+  "extName": {
+    "message": "PostRay - Export public Instagram post data",
+    "description": "Extension name"
+  },
+  "forgetPwdLabel": {
+    "message": "Forget password?"
+  },
+  "extDesc": {
+    "message": "Collect public post captions, likes, comments, and timestamps from Instagram profiles.",
+    "description": "Extension description"
+  },
+  "loginTitle": {
+    "message": "Login",
+    "description": "Login page title"
+  },
+  "otherLoginWays": {
+    "message": "other ways",
+    "description": "Other ways to login"
+  },
+  "registerTitle": {
+    "message": "Register",
+    "description": "Register page title"
+  },
+  "usernameLabel": {
+    "message": "Username",
+    "description": "Username label"
+  },
+  "pwdLabel": {
+    "message": "Password",
+    "description": "Password label"
+  },
+  "loginButtonLabel": {
+    "message": "Sign In",
+    "description": "Log In button label"
+  },
+  "logoutButtonLabel": {
+    "message": "Sign Out",
+    "description": "Log Out button label"
+  },
+  "logoutConfirmLabel": {
+    "message": "Are you sure you want to log out?",
+    "description": "Logout confirm prompt"
+  },
+  "registerButtonLabel": {
+    "message": "Create Account",
+    "description": "Register button label"
+  },
+  "startCollectingLabel": {
+    "message": "Collect Posts",
+    "description": "Start crawling button label"
+  },
+  "cancelCollectingLabel": {
+    "message": "Stop Collection",
+    "description": "Cancel crawling button label"
+  },
+  "config": {
+    "message": "Config",
+    "description": "Config tab label on side panel"
+  },
+  "alertNoDateRange": {
+    "message": "Please enter a date range.",
+    "description": "Alert message when no date range is provided"
+  },
+  "alertNoAccountId": {
+    "message": "Profile ID is required.",
+    "description": "Alert message when no account ID is provided"
+  },
+  "alertNoUserName": {
+    "message": "Username is required.",
+    "description": "Alert message when no username is provided"
+  },
+  "alertNoPassword": {
+    "message": "Password is required.",
+    "description": "Alert message when no password is provided"
+  },
+  "loginFailedLabel": {
+    "message": "User not found or password is incorrect.",
+    "description": "Login failed message"
+  },
+  "registerFailedLabel": {
+    "message": "Register failed.",
+    "description": "Register failed message"
+  },
+  "registerSuccessLabel": {
+    "message": "Register success.",
+    "description": "Register success message"
+  },
+  "usernameDuplicateLabel": {
+    "message": "Username already exists.",
+    "description": "Username duplicate error"
+  },
+  "accountIdFiledLabel": {
+    "message": "Instagram Profile",
+    "description": "Account ID field label"
+  },
+  "dateLaFieldLabel": {
+    "message": "Date Range",
+    "description": "Date field label"
+  },
+  "accountIdFiledPlaceholder": {
+    "message": "Enter a public Instagram profile ID",
+    "description": "Account ID field placeholder"
+  },
+  "quickDateFiledLabel": {
+    "message": "Quick Date",
+    "description": "Quick date field label"
+  },
+  "modifyDateFiledLabel": {
+    "message": "Modify Date",
+    "description": "Modify date field label"
+  },
+  "todayLabel": {
+    "message": "Today",
+    "description": "Today label"
+  },
+  "yesterdayLabel": {
+    "message": "Yesterday",
+    "description": "Yesterday label"
+  },
+  "thisMonthLabel": {
+    "message": "This Month",
+    "description": "This month label"
+  },
+  "lastMonthLabel": {
+    "message": "Last Month",
+    "description": "Last month label"
+  },
+  "plusOneDayLabel": {
+    "message": "+1D",
+    "description": "Plus one day label"
+  },
+  "minusOneDayLabel": {
+    "message": "-1D",
+    "description": "Minus one day label"
+  },
+  "plusOneMonthLabel": {
+    "message": "+1M",
+    "description": "Plus one month label"
+  },
+  "minusOneMonthLabel": {
+    "message": "-1M",
+    "description": "Minus one month label"
+  },
+  "startDateLabel": {
+    "message": "Start Date",
+    "description": "Start date label"
+  },
+  "endDateLabel": {
+    "message": "End Date",
+    "description": "End date label"
+  },
+  "dateFormatHint": {
+    "message": "Date format: YYYY-MM-DD. E.g., 2023-08-15",
+    "description": "Date format hint"
+  },
+  "historyLabel": {
+    "message": "Recent Collections",
+    "description": "History label"
+  },
+  "noDataLabel": {
+    "message": "No data",
+    "description": "Empty state text for lists"
+  },
+  "downloadLabel": {
+    "message": "Download",
+    "description": "Download label"
+  },
+  "clearLabel": {
+    "message": "Clear History",
+    "description": "Clear history button label"
+  },
+  "clearConfirmLabel": {
+    "message": "Clear all recent collections?",
+    "description": "Confirm message before clearing history"
+  },
+  "exportLabel": {
+    "message": "Export Excel",
+    "description": "Export history button label"
+  },
+  "searchLabel": {
+    "message": "Search records",
+    "description": "Search input placeholder"
+  },
+  "totalLabel": {
+    "message": "Records",
+    "description": "Total count label"
+  },
+  "previewLabel": {
+    "message": "Open Viewer",
+    "description": "Preview label"
+  },
+  "freeUserDateHint": {
+    "message": "Free plan collects the most recent 50 public posts. Upgrade to unlock custom date ranges.",
+    "description": "Hint for free users about date range"
+  },
+  "freeUserDateHintPre": {
+    "message": "Free plan: most recent 50 posts only."
+  },
+  "freeUserDateHintPost": {
+    "message": "to unlock custom date ranges."
+  },
+  "navigateToInstagramAlert": {
+    "message": "Open an Instagram profile page to use PostRay.",
+    "description": "Navigate to Instagram alert"
+  },
+  "OrLabel": {
+    "message": "or"
+  },
+  "GoogleLoginLabel": {
+    "message": "Continue with Google"
+  },
+  "docsEntryLabel": {
+    "message": "Guide",
+    "description": "Entry button to docs/info page"
+  },
+  "navHomeLabel": {
+    "message": "Home",
+    "description": "Docs nav home label"
+  },
+  "navDocsLabel": {
+    "message": "Guide",
+    "description": "Docs nav label"
+  },
+  "navPlansLabel": {
+    "message": "Plans",
+    "description": "Docs nav plans label"
+  },
+  "backLabel": {
+    "message": "Back",
+    "description": "Back button label"
+  },
+  "editLabel": {
+    "message": "Edit",
+    "description": "Edit markdown label"
+  },
+  "saveLabel": {
+    "message": "Save",
+    "description": "Save markdown label"
+  },
+  "resetLabel": {
+    "message": "Reset",
+    "description": "Reset markdown label"
+  },
+  "PlatfromIns": {
+    "message": "Instagram"
+  },
+  "collectionSetupLabel": {
+    "message": "Collection Setup"
+  },
+  "signedInAsLabel": {
+    "message": "Signed in as"
+  },
+  "freePlanLabel": {
+    "message": "Free Plan"
+  },
+  "memberPlanLabel": {
+    "message": "Member Plan"
+  },
+  "platformLabel": {
+    "message": "Platform"
+  },
+  "planLabel": {
+    "message": "Plan"
+  },
+  "loginPanelLabel": {
+    "message": "Instagram Public Post Exporter"
+  },
+  "loginPanelDesc": {
+    "message": "Sign in to manage collections and export results."
+  },
+  "workspaceHeadlineLabel": {
+    "message": "Instagram Public Post Data"
+  },
+  "upgradeButtonLabel": {
+    "message": "Upgrade"
+  },
+  "upgradeModalTitle": {
+    "message": "Upgrade to Pro"
+  },
+  "upgradeModalSubtitle": {
+    "message": "Unlock custom date ranges and more"
+  },
+  "upgradeFeature1": {
+    "message": "Custom date range collection"
+  },
+  "upgradeFeature2": {
+    "message": "Unlimited posts per run"
+  },
+  "upgradeFeature3": {
+    "message": "Excel export"
+  },
+  "upgradeFeature4": {
+    "message": "Priority support"
+  },
+  "planProPrice": {
+    "message": "TODO / month"
+  },
+  "subscribeNowLabel": {
+    "message": "Subscribe Now"
+  },
+  "maybeLaterLabel": {
+    "message": "Maybe later"
+  },
+  "checkingPaymentLabel": {
+    "message": "Verifying payment..."
+  },
+  "waitingPaymentLabel": {
+    "message": "Payment page opened — waiting for payment"
+  },
+  "paymentSuccessLabel": {
+    "message": "Upgrade successful! Refreshing..."
+  },
+  "openPaymentPageLabel": {
+    "message": "Open payment page again"
+  },
+  "daysLeftLabel": {
+    "message": "days left"
+  },
+  "expiredLabel": {
+    "message": "Expired"
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "appName": {
+    "message": "PostRay",
+    "description": ""
+  },
+  "extName": {
+    "message": "PostRay - 导出 Instagram 公开帖子数据",
+    "description": "Extension name"
+  },
+  "forgetPwdLabel": {
+    "message": "忘记密码"
+  },
+  "extDesc": {
+    "message": "采集 Instagram 公开帖文的文案、点赞、评论和发布时间",
+    "description": "Extension description"
+  },
+  "loginTitle": {
+    "message": "登录",
+    "description": "Login page title"
+  },
+  "registerTitle": {
+    "message": "注册",
+    "description": "Register page title"
+  },
+  "usernameLabel": {
+    "message": "用户名",
+    "description": "Username label"
+  },
+  "pwdLabel": {
+    "message": "密码",
+    "description": "Password label"
+  },
+  "loginButtonLabel": {
+    "message": "登录",
+    "description": "Log In button label"
+  },
+  "logoutButtonLabel": {
+    "message": "退出登录",
+    "description": "Log Out button label"
+  },
+  "logoutConfirmLabel": {
+    "message": "确认要登出吗？",
+    "description": "Logout confirm prompt"
+  },
+  "registerButtonLabel": {
+    "message": "创建账号",
+    "description": "Register button label"
+  },
+  "startCollectingLabel": {
+    "message": "开始采集",
+    "description": "Start crawling button label"
+  },
+  "cancelCollectingLabel": {
+    "message": "停止采集",
+    "description": "Cancel crawling button label"
+  },
+  "config": {
+    "message": "配置",
+    "description": "Config tab label on side panel"
+  },
+  "alertNoDateRange": {
+    "message": "日期不能为空",
+    "description": "Alert message when no date range is provided"
+  },
+  "alertNoAccountId": {
+    "message": "账号 ID 不能为空。",
+    "description": "Alert message when no account ID is provided"
+  },
+  "alertNoUserName": {
+    "message": "用户名不能为空。",
+    "description": "Alert message when no username is provided"
+  },
+  "alertNoPassword": {
+    "message": "密码不能为空。",
+    "description": "Alert message when no password is provided"
+  },
+  "loginFailedLabel": {
+    "message": "用户不存在或密码错误",
+    "description": "Login failed message"
+  },
+  "registerFailedLabel": {
+    "message": "注册失败。",
+    "description": "Register failed message"
+  },
+  "registerSuccessLabel": {
+    "message": "注册成功。",
+    "description": "Register success message"
+  },
+  "usernameDuplicateLabel": {
+    "message": "用户名已存在",
+    "description": "Username duplicate error"
+  },
+  "accountIdFiledLabel": {
+    "message": "Instagram 账号",
+    "description": "Account ID field label"
+  },
+  "dateLaFieldLabel": {
+    "message": "日期范围",
+    "description": "Date field label"
+  },
+  "accountIdFiledPlaceholder": {
+    "message": "输入公开 Instagram 账号 ID",
+    "description": "Account ID field placeholder"
+  },
+  "quickDateFiledLabel": {
+    "message": "快捷日期",
+    "description": "Quick date field label"
+  },
+  "modifyDateFiledLabel": {
+    "message": "调整日期",
+    "description": "Modify date field label"
+  },
+  "todayLabel": {
+    "message": "今天",
+    "description": "Today label"
+  },
+  "yesterdayLabel": {
+    "message": "昨天",
+    "description": "Yesterday label"
+  },
+  "thisMonthLabel": {
+    "message": "本月",
+    "description": "This month label"
+  },
+  "lastMonthLabel": {
+    "message": "上个月",
+    "description": "Last month label"
+  },
+  "plusOneDayLabel": {
+    "message": "+1天",
+    "description": "Plus one day label"
+  },
+  "minusOneDayLabel": {
+    "message": "-1天",
+    "description": "Minus one day label"
+  },
+  "plusOneMonthLabel": {
+    "message": "+1月",
+    "description": "Plus one month label"
+  },
+  "minusOneMonthLabel": {
+    "message": "-1月",
+    "description": "Minus one month label"
+  },
+  "startDateLabel": {
+    "message": "开始日期",
+    "description": "Start date label"
+  },
+  "endDateLabel": {
+    "message": "结束日期",
+    "description": "End date label"
+  },
+  "historyLabel": {
+    "message": "最近采集",
+    "description": "History label"
+  },
+  "noDataLabel": {
+    "message": "暂无数据",
+    "description": "Empty state text for lists"
+  },
+  "downloadLabel": {
+    "message": "下载",
+    "description": "Download label"
+  },
+  "clearLabel": {
+    "message": "清空记录",
+    "description": "Clear history button label"
+  },
+  "clearConfirmLabel": {
+    "message": "确认清空最近采集记录？",
+    "description": "Confirm message before clearing history"
+  },
+  "exportLabel": {
+    "message": "导出 Excel",
+    "description": "Export history button label"
+  },
+  "searchLabel": {
+    "message": "搜索记录",
+    "description": "Search input placeholder"
+  },
+  "totalLabel": {
+    "message": "记录数",
+    "description": "Total count label"
+  },
+  "previewLabel": {
+    "message": "查看明细",
+    "description": "Preview label"
+  },
+  "freeUserDateHint": {
+    "message": "免费版默认采集最近 50 条公开帖文，升级后可使用自定义日期范围。",
+    "description": "Hint for free users about date range"
+  },
+  "freeUserDateHintPre": {
+    "message": "免费版仅采集最近 50 条帖文，"
+  },
+  "freeUserDateHintPost": {
+    "message": "后可使用自定义日期范围。"
+  },
+  "navigateToInstagramAlert": {
+    "message": "请先打开 Instagram 账号页面，再使用 PostRay。",
+    "description": "Navigate to Instagram alert"
+  },
+  "OrLabel": {
+    "message": "或"
+  },
+  "GoogleLoginLabel": {
+    "message": "通过Google登录"
+  },
+  "docsEntryLabel": {
+    "message": "使用指南",
+    "description": "入口按钮"
+  },
+  "navHomeLabel": {
+    "message": "首页",
+    "description": "文档导航首页"
+  },
+  "navDocsLabel": {
+    "message": "使用指南",
+    "description": "文档导航"
+  },
+  "navPlansLabel": {
+    "message": "会员",
+    "description": "文档导航套餐"
+  },
+  "backLabel": {
+    "message": "返回",
+    "description": "返回按钮"
+  },
+  "editLabel": {
+    "message": "编辑",
+    "description": "编辑 markdown"
+  },
+  "saveLabel": {
+    "message": "保存",
+    "description": "保存 markdown"
+  },
+  "resetLabel": {
+    "message": "重置",
+    "description": "重置 markdown"
+  },
+  "PlatfromIns": {
+    "message": "Instagram"
+  },
+  "collectionSetupLabel": {
+    "message": "采集设置"
+  },
+  "signedInAsLabel": {
+    "message": "当前账号"
+  },
+  "freePlanLabel": {
+    "message": "免费版"
+  },
+  "memberPlanLabel": {
+    "message": "会员版"
+  },
+  "platformLabel": {
+    "message": "平台"
+  },
+  "planLabel": {
+    "message": "套餐"
+  },
+  "loginPanelLabel": {
+    "message": "Instagram 公开帖子导出工具"
+  },
+  "loginPanelDesc": {
+    "message": "登录后管理采集任务并导出结果。"
+  },
+  "workspaceHeadlineLabel": {
+    "message": "Instagram 公开帖子数据"
+  },
+  "upgradeButtonLabel": {
+    "message": "升级"
+  },
+  "upgradeModalTitle": {
+    "message": "升级至 Pro"
+  },
+  "upgradeModalSubtitle": {
+    "message": "解锁自定义日期范围等完整功能"
+  },
+  "upgradeFeature1": {
+    "message": "自定义日期范围采集"
+  },
+  "upgradeFeature2": {
+    "message": "每次不限帖子数量"
+  },
+  "upgradeFeature3": {
+    "message": "Excel 导出"
+  },
+  "upgradeFeature4": {
+    "message": "优先客户支持"
+  },
+  "planProPrice": {
+    "message": "TODO / 月"
+  },
+  "subscribeNowLabel": {
+    "message": "立即订阅"
+  },
+  "maybeLaterLabel": {
+    "message": "暂不升级"
+  },
+  "checkingPaymentLabel": {
+    "message": "正在验证支付状态..."
+  },
+  "waitingPaymentLabel": {
+    "message": "支付页面已打开，等待支付完成"
+  },
+  "paymentSuccessLabel": {
+    "message": "升级成功！正在刷新..."
+  },
+  "openPaymentPageLabel": {
+    "message": "重新打开支付页面"
+  },
+  "daysLeftLabel": {
+    "message": "天后到期"
+  },
+  "expiredLabel": {
+    "message": "已到期"
+  }
+}

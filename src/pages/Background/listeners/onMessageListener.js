@@ -1,4 +1,4 @@
-import { CHECK_USERNAME, CLEAR_HISTORY, COLLECTING_STATE, EXPORT_RUN, LIST_RUNS, LOGIN, REGISTER, GET_USER_TYPE, LOGOUT, NET_RESPONSE, NET_TIMEOUT, START_COLLECTION, START_HOOK, START_SCROLL, STOP_COLLECTION, HISTORY, HISTORY_REFRESH_TS, DEFAULT_ITEMS_TO_COLLECT } from "../../consts";
+import { CHECK_USERNAME, CHECK_PAYMENT_STATUS, CLAW_U, CLEAR_HISTORY, COLLECTING_STATE, EXPORT_RUN, LIST_RUNS, LOGIN, REGISTER, GET_USER_TYPE, LOGOUT, NET_RESPONSE, NET_TIMEOUT, START_COLLECTION, START_HOOK, START_SCROLL, STOP_COLLECTION, HISTORY, HISTORY_REFRESH_TS, DEFAULT_ITEMS_TO_COLLECT, USER_PROFILE } from "../../consts";
 import { addRecords, deleteAllRunStores, deleteRunRecords, getRecordsByRun } from "../utils/recordsDb";
 
 import * as XLSX from "xlsx";
@@ -7,7 +7,6 @@ const runState = new Map();
 const NO_RESPONSE_TIMEOUT_MS = 10000;
 const INITIAL_RESPONSE_TIMEOUT_MS = 15000;
 const SUPABASE_ORIGIN = "https://cfhshhogusutbyctcjsn.supabase.co";
-const SUPABASE_DOMAIN = "cfhshhogusutbyctcjsn.supabase.co";
 const AUTH_LOGIN_STATE = "AUTH_LOGIN_STATE";
 
 const clearNoResponseTimer = (state) => {
@@ -27,29 +26,7 @@ const armNoResponseTimer = (tabId, timeoutMs = NO_RESPONSE_TIMEOUT_MS, reason = 
   runState.set(tabId, state);
 };
 
-const listAuthCookies = async () => {
-  return chrome.cookies.getAll({ domain: SUPABASE_DOMAIN });
-};
-
 const clearAuthState = async () => {
-  const authData = await chrome.storage.local.get(AUTH_LOGIN_STATE);
-  const state = authData[AUTH_LOGIN_STATE];
-
-  if (state?.cookie?.name && state?.cookie?.domain) {
-    const cookieUrl = `https://${state.cookie.domain.replace(/^\./, "")}${state.cookie.path || "/"}`;
-    try {
-      await chrome.cookies.remove({ url: cookieUrl, name: state.cookie.name });
-    } catch (e) {}
-  } else {
-    const cookies = await listAuthCookies();
-    await Promise.all(
-      cookies.map((c) => {
-        const cookieUrl = `https://${String(c.domain || "").replace(/^\./, "")}${c.path || "/"}`;
-        return chrome.cookies.remove({ url: cookieUrl, name: c.name }).catch(() => undefined);
-      })
-    );
-  }
-
   await chrome.storage.local.remove(AUTH_LOGIN_STATE);
 };
 
@@ -211,6 +188,44 @@ export const onMessageListener = () => {
         }
         await exportRunToExcel(runId);
         sendResponse({ ok: true });
+        return;
+      }
+
+      if (msg?.type === CHECK_PAYMENT_STATUS) {
+        const clawUData = await chrome.storage.local.get(CLAW_U);
+        const hashedUsername = clawUData[CLAW_U];
+        if (!hashedUsername) {
+          sendResponse({ ok: false, upgraded: false });
+          return;
+        }
+        const profileData = await chrome.storage.local.get(USER_PROFILE);
+        const profile = profileData[USER_PROFILE];
+        // TODO: This reuses the existing get-user-permissions endpoint.
+        // Once the payment webhook updates the user type in Supabase, this will detect the change.
+        const res = await fetch(`${SUPABASE_ORIGIN}/functions/v1/get-user-permissions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ username: hashedUsername }),
+        });
+        const json = await res.json();
+        if (!json.success) {
+          sendResponse({ ok: false, upgraded: false });
+          return;
+        }
+        // permission_codes is a direct number (0=free, 1=pro), updated_at is a top-level field
+        const newType = Number(json?.permission_codes ?? 0);
+        const newUpdatedAt = json?.updated_at ?? null;
+        const currentType = Number(profile?.type ?? 0);
+        const upgraded = newType !== 0 && currentType === 0;
+        const typeChanged = newType !== currentType;
+        const updatedAtChanged = newUpdatedAt !== (profile?.updatedAt ?? null);
+        if (typeChanged || updatedAtChanged) {
+          await chrome.storage.local.set({
+            [USER_PROFILE]: { ...profile, type: newType, updatedAt: newUpdatedAt },
+          });
+        }
+        sendResponse({ ok: true, upgraded });
         return;
       }
 

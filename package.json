@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build": "node utils/build.js",
+    "build:web": "webpack --config webpack.web.config.js",
     "start": "node utils/server.js",
     "hot-reload": "webpack serve --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
